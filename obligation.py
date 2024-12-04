@@ -42,3 +42,19 @@
 #
 # -----------------------------------------------------------------------------
 # Напишите программу ниже:
+price1 = int(input())
+price2 = int(input())
+money = int(input())
+month = int(input())
+percent = int(input())
+T = int(input())
+comissiontobuy = price1 * (percent / 100)
+alltheprice = price1 + comissiontobuy
+cupon = money * (T / month)
+allthemoney = price2 + cupon - alltheprice
+if allthemoney > 0:
+    tax = allthemoney * 0.13
+else:
+    tax = 0
+cleanmoney = (allthemoney - tax) / (price1 * 100)
+print("Чистая доходность составит", cleanmoney)
